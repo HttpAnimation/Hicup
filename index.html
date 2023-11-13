@@ -35,13 +35,13 @@
         }
     </style>
     <script>
-        function toggleModal(photoUrl) {
+        function toggleModal(contentUrl) {
             var modal = document.getElementById('myModal');
-            var modalImg = document.getElementById('modalImg');
+            var modalContent = document.getElementById('modalContent');
             var closeModal = document.getElementById('closeModal');
 
             modal.style.display = 'flex';
-            modalImg.src = photoUrl;
+            modalContent.innerHTML = `<audio controls><source src="${contentUrl}" type="audio/mp3">Your browser does not support the audio tag.</audio>`;
 
             closeModal.onclick = function () {
                 modal.style.display = 'none';
@@ -55,8 +55,10 @@
     </header>
 
     <nav>
+        <a href="My-HTML/index.html"><button>My custom sites</button></a>
         <button onclick="loadContent('photos')">Photos</button>
         <button onclick="loadContent('videos')">Videos</button>
+        <button onclick="loadContent('music')">Music</button>
     </nav>
 
     <section class="container" id="content"></section>
@@ -64,7 +66,7 @@
     <!-- Photo Modal -->
     <div id="myModal" class="modal">
         <span id="closeModal" class="close">&times;</span>
-        <img id="modalImg" class="modal-content">
+        <div id="modalContent" class="modal-content"></div>
     </div>
 
     <script>
@@ -74,12 +76,12 @@
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     document.getElementById('content').innerHTML = xhr.responseText;
 
-                    // Add event listeners to each photo to open the modal
-                    var photos = document.querySelectorAll('.photo');
-                    photos.forEach(function (photo) {
-                        photo.addEventListener('click', function () {
-                            var photoUrl = this.getAttribute('src');
-                            toggleModal(photoUrl);
+                    // Add event listeners to each item to open the modal
+                    var items = document.querySelectorAll('.item');
+                    items.forEach(function (item) {
+                        item.addEventListener('click', function () {
+                            var contentUrl = this.getAttribute('data-url');
+                            toggleModal(contentUrl);
                         });
                     });
                 }

@@ -14,4 +14,7 @@ wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Build.sh && chmo
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/000-default.conf
 mkdir photos
 mkdir videos
+mkdir My-HTML
+cd My-HTML
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/My-HTML/index.html
 npm install express

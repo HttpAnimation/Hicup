@@ -2,17 +2,34 @@ const express = require('express');
 const os = require('os');
 const app = express();
 const path = require('path');
+const fs = require('fs');
 
 const photosPath = path.join(__dirname, 'photos');
 const videosPath = path.join(__dirname, 'videos');
+const musicPath = path.join(__dirname, 'music');
 
 app.use('/photos', express.static(photosPath));
 app.use('/videos', express.static(videosPath));
+app.use('/music', express.static(musicPath, { extensions: ['mp3'] }));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/server.php', (req, res) => {
+    const folder = req.query.type === 'photos' ? 'photos' : req.query.type === 'videos' ? 'videos' : 'music';
+    const files = fs.readdirSync(path.join(__dirname, folder));
+    let content = '';
+
+    files.forEach((file, index) => {
+        const contentUrl = `${folder}/${file}`;
+        content += `<div class="item" data-url="${contentUrl}">${file}</div>`;
+    });
+
+    res.send(content);
+});
+
+// Function to get local IP address
 const getLocalIpAddress = () => {
     const interfaces = os.networkInterfaces();
     for (const interfaceName in interfaces) {
@@ -26,6 +43,7 @@ const getLocalIpAddress = () => {
     return 'localhost'; // Default to localhost if no suitable address is found
 };
 
+// Get local IP address
 const PORT = 3000;
 const HOST = getLocalIpAddress();
 
