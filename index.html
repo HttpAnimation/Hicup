@@ -34,20 +34,7 @@
             cursor: pointer;
         }
     </style>
-    <script>
-        function toggleModal(contentUrl) {
-            var modal = document.getElementById('myModal');
-            var modalContent = document.getElementById('modalContent');
-            var closeModal = document.getElementById('closeModal');
-
-            modal.style.display = 'flex';
-            modalContent.innerHTML = `<audio controls><source src="${contentUrl}" type="audio/mp3">Your browser does not support the audio tag.</audio>`;
-
-            closeModal.onclick = function () {
-                modal.style.display = 'none';
-            };
-        }
-    </script>
+    <script src="hicup-player.js"></script>
 </head>
 <body>
     <header>
