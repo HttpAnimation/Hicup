@@ -5,88 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Hicup</title>
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-        }
-
-        .modal-content {
-            max-width: 80%;
-            max-height: 80%;
-            object-fit: contain;
-        }
-
-        .close {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: #fff;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
-    <script>
-        function toggleModal(photoUrl) {
-            var modal = document.getElementById('myModal');
-            var modalImg = document.getElementById('modalImg');
-            var closeModal = document.getElementById('closeModal');
-
-            modal.style.display = 'flex';
-            modalImg.src = photoUrl;
-
-            closeModal.onclick = function () {
-                modal.style.display = 'none';
-            };
-        }
-    </script>
 </head>
 <body>
     <header>
-        <h1>Hicup</h1>
+        <h1>Welcome to Hicup</h1>
+        <p>Stream Videos and Photos across your network with ease.</p>
     </header>
+    
+    <section class="cta">
+        <p>Experience seamless streaming in the dark.</p>
+        <a href="Get Started.html" class="btn">Get Started</a>
+    </section>
 
-    <nav>
-        <button onclick="loadContent('photos')">Photos</button>
-        <button onclick="loadContent('videos')">Videos</button>
-    </nav>
-
-    <section class="container" id="content"></section>
-
-    <!-- Photo Modal -->
-    <div id="myModal" class="modal">
-        <span id="closeModal" class="close">&times;</span>
-        <img id="modalImg" class="modal-content">
-    </div>
-
-    <script>
-        function loadContent(type) {
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    document.getElementById('content').innerHTML = xhr.responseText;
-
-                    // Add event listeners to each photo to open the modal
-                    var photos = document.querySelectorAll('.photo');
-                    photos.forEach(function (photo) {
-                        photo.addEventListener('click', function () {
-                            var photoUrl = this.getAttribute('src');
-                            toggleModal(photoUrl);
-                        });
-                    });
-                }
-            };
-            xhr.open('GET', 'server.php?type=' + type, true);
-            xhr.send();
-        }
-    </script>
+    <section class="features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Minimalist Design: A sleek, dark-themed interface for an elegant media hosting experience.</li>
+            <li>Seamless Navigation: Focus on simplicity, allowing users to effortlessly explore their visual content.</li>
+            <li>Modern Touch: Hicup incorporates modern design elements for a delightful and up-to-date user experience.</li>
+            <li>Distraction-Free: Enjoy your photos and videos without unnecessary distractions.</li>
+        </ul>
+    </section>
 </body>
 </html>
