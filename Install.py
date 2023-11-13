@@ -36,6 +36,10 @@ def main():
         file_name = url.split("/")[-1]
         download_file(url, file_name)
 
+    # Create photos and videos directories
+    os.system("mkdir photos")
+    os.system("mkdir videos")
+
     # Install Express using npm
     os.system("npm install express")
 

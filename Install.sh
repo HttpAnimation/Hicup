@@ -12,4 +12,6 @@ wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/README.md
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Dockerfile
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Build.sh && chmod +x Build.sh
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/000-default.conf
+mkdir photos
+mkdir videos
 npm install express
