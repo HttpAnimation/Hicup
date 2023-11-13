@@ -24,11 +24,9 @@ def main():
         "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/package-lock.json",
         "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/index.html",
         "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/apache2.conf",
-        "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Run.sh",
         "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Run.py",
         "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/README.md",
         "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Dockerfile",
-        "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Build.sh",
         "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Build.py",
         "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/000-default.conf"
     ]
