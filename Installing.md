@@ -6,7 +6,7 @@ To install Hicup you will first need the requirements installed but once install
 Open a terminal and run this command.
 
 ```
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Install.sh && ./Install.sh
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Install.sh && chmod +x Install.sh && ./Install.sh
 ```
 
 ## 2) Bad OS'S | Windows
