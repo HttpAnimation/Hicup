@@ -1,10 +1,1 @@
-# Hicup
-Hicup is a docker/website that will allow you to host Videos and Photos across you're network
-
-## [Hosting](Hosting.md)
-
-## [Requirements](Requirements.md)
-
-## [Installing](Installing.md)
-
-## [Running](Running.md)
+This is the website for Hicups for the main page [Click here](https://github.com/HttpAnimation/Hicup)
