@@ -10,3 +10,5 @@ Hicup is a docker/website that will allow you to host Videos and Photos across y
 ## [Installing](Installing.md)
 
 ## [Running](Running.md)
+
+## [Grabbing URL](Grabbing-URL.md)
