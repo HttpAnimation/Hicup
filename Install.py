@@ -4,23 +4,25 @@ import urllib.request
 # Create directories
 os.makedirs("Hicup/photos", exist_ok=True)
 os.makedirs("Hicup/videos", exist_ok=True)
+os.makedirs("Hicup/music", exist_os=True)
 os.makedirs("Hicup/My-HTML", exist_ok=True)
 os.chdir("Hicup")
 
 # URLs to download
 urls = [
-    "https://github.com/HttpAnimation/Hicup/raw/main/styles.css",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/server.php",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/server.js",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/package.json",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/package-lock.json",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/index.html",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/apache2.conf",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Run.sh",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/README.md",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Dockerfile",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Build.sh",
-    "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/000-default.conf"
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/000-default.conf",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Build.py",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Dockerfile",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Run.py",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/apache2.conf",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/hicup-css.css",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/hicup-player.js",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/index.html",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/package-lock.json",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/package.json",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/server.js",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/server.php",
+ "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/styles.css"
 ]
 
 # Download files
@@ -29,8 +31,9 @@ for url in urls:
     urllib.request.urlretrieve(url, filename)
 
 # Change permissions for the Run.sh and Build.sh scripts
-os.chmod("Run.sh", 0o755)
-os.chmod("Build.sh", 0o755)
+# Not needed
+# os.chmod("Run.sh", 0o755)
+# os.chmod("Build.sh", 0o755)
 
 # Change back to the main directory
 os.chdir("..")

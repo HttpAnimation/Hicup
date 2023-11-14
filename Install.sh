@@ -17,7 +17,6 @@ wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/000-default.conf
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Build.sh
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/BuildAndRun.sh
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Dockerfile
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Install.sh
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Run.sh
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/apache2.conf
 wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/hicup-css.css
