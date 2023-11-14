@@ -1,22 +1,30 @@
 mkdir Hicup
 cd Hicup
-mkdir photos
 mkdir videos
+mkdir music
+mkdir photos
 mkdir My-HTML
-wget https://github.com/HttpAnimation/Hicup/blob/main/styles.css
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/server.php
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/server.js
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/package.json
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/package-lock.json
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/index.html
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/apache2.conf
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Run.sh && chmod +x Run.sh
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/README.md
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Dockerfile
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Build.sh && chmod +x Build.sh
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/000-default.conf
-cd My-HTML
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/My-HTML/index.html
-wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/My-HTML/styles.css
+cd videos 
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/VideosFolder.txt
 cd ../
-npm install express
+cd music
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/MusicFolder.txt
+cd ../
+cd photos
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/PhotosFolder.txt
+cd ../
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/000-default.conf
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Build.sh
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/BuildAndRun.sh
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Dockerfile
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Install.sh
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Run.sh
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/apache2.conf
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/hicup-css.css
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/hicup-player.js
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/index.html
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/package-lock.json
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/package.json
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/server.js
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/server.php
+wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/styles.css
