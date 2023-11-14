@@ -13,7 +13,7 @@ foreach ($files as $file) {
             echo "<audio controls><source src='$filePath' type='audio/mp3'>Your browser does not support the audio tag.</audio>";
         } else {
             // For photos, generate an img tag
-            echo "<img src='$filePath' style='max-width: 200px; margin: 10px;'>";
+            echo "<img src='$filePath' style='max-width: 400px; margin: 10px;'>";
         }
     }
 }
