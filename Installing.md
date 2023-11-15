@@ -10,6 +10,4 @@ wget https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Install.sh && ch
 ```
 
 ## 2) Bad OS'S | Windows
-```
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/HttpAnimation/Hicup/main/Install.py" & python Install.py
-```
+There is not surrport for windows and none is ever planned the docker might work but theres not install commands.
